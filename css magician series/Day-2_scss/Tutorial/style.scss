@@ -1,0 +1,79 @@
+$mycolor: darkorange;
+$basesize:4px;
+
+@mixin flex-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 80px;
+
+.content-left {
+      width: 400px;
+        .title{
+            font-size: 40px;
+                 }
+         span{
+            color: $mycolor;
+             }
+            p{
+             width: 400px;
+             }
+             .order-button {
+                @include flex-box();
+                font-size: 14px;
+                gap: 8px;
+                padding: ($basesize * 3) ($basesize * 6);
+                border-radius: ($basesize * 10);
+                .span{
+                    flex-grow: 1;
+                }
+                 .icon{
+                    background: $mycolor;
+                    padding: $basesize;
+                    border-radius: 100%;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                 }
+             }
+         }
+                
+             
+.content-rigth {
+    .hero-img-container{
+        @include flex-box();
+        background:brown ;
+        border-radius: 100%;
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+    img{
+        width: 300px;
+        height: auto;
+    }
+    .glasy-card {
+        width: max-content;
+        padding: $basesize ($basesize * 6);
+        background: white;
+        border-radius: ($basesize * 10);
+
+        position: absolute;
+        top: ($basesize * 5);
+        left: 0;
+        .glasy-border{
+            background:#eae ;
+            padding: $basesize ($basesize * 6);
+            border-radius: $basesize ($basesize * 10);
+        }
+    }
+  }
+}
